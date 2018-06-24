@@ -1,0 +1,186 @@
+
+body {
+  padding-top: 50px;
+}
+
+.padding_0 {
+  padding: 0; 
+}
+
+.padding_10 {
+  padding: 10px; 
+}
+
+.menu_sections {
+  width: 100%;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+  color: #ffffff;
+  position: relative;
+}
+.navbar-inverse {
+  background-color: rgba(34, 34, 34, 0.9);
+}
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a.active {
+  color: #ffffff;
+}
+/**** Background Gradients ****/
+.radialGradientSeaGreen {
+  background: radial-gradient(ellipse at 85% 85%,#18a28d 0,#69cdcc 100%);
+  -webkit-background: radial-gradient(ellipse at 85% 85%,#18a28d 0,#69cdcc 100%);
+}
+.linearGradientPurple {
+  background: linear-gradient(180deg,rgba(147,39,143,0) 0,rgba(147,39,143,.14) 1%,#93278f 7%,#93278f 19%,#4e2f91 39%,#4e2f91 49%,#632d91 61%,#93278f 85%,#fbb03b);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0093278f",endColorstr="#fbb03b",GradientType=0);
+}
+.linearGradientYellowPurple {
+  background: linear-gradient(90deg,#fbe89d 0,#e5c500 11%,#e59e03 39%,#cf631b 50%,#93278f);
+}
+.linearBlueGradient {
+  background: linear-gradient(180deg,rgb(119, 161, 211), rgb(121, 203, 202), rgb(230, 132, 174));
+}
+.linearRedWhite {
+  background: linear-gradient(180deg,rgb(239, 59, 54), rgb(255, 255, 255));
+}
+.linearSeaGreen {
+  background: linear-gradient(180deg,rgb(0, 121, 145), rgb(120, 255, 214));
+}
+.linearLightDarkBlue {
+  background: linear-gradient(180deg,rgb(86, 204, 242), rgb(47, 128, 237));
+}
+.linearSunSkitOrange {
+  background: linear-gradient(180deg, rgb(242, 153, 74), rgb(242, 201, 76));
+}
+.linearVeniceBlue {
+  background: linear-gradient(180deg, rgb(97, 144, 232), rgb(167, 191, 232));
+}
+.linearHoneySeaGreen {
+  background: linear-gradient(180deg, rgb(67, 198, 172), rgb(248, 255, 174));
+}
+.linearVineBluePink {
+  background: linear-gradient(180deg, rgb(52, 148, 230), rgb(236, 110, 173));
+}
+.linearBlueGreen {
+  background: linear-gradient(180deg, rgb(76, 162, 205), rgb(103, 178, 111));
+}
+.linearPurplePink {
+  background: linear-gradient(180deg, rgb(167, 112, 239), rgb(207, 139, 243), rgb(253, 185, 155));
+}
+.linearBlueYellow {
+  background: #004FF9;  /* fallback for old browsers */
+  background: linear-gradient(to top, #FFF94C, #004FF9);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #FFF94C, #004FF9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.linearBluePinkOrange {
+  background: #FEAC5E;  /* fallback for old browsers */
+  background: linear-gradient(to bottom, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.linearBlueToPurple {
+  background: #4568DC;  /* fallback for old browsers */
+  background: linear-gradient(to top, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.linearSeaGreenToYellow {
+  background: #00c3ff;  /* fallback for old browsers */
+  background: linear-gradient(to top, #ffff1c, #00c3ff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #ffff1c, #00c3ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.linearYellowToGreen {
+  background: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #fbe380),color-stop(65%, #00b9a2),color-stop(100%, #2c9fc4));
+}
+.linearLightBlue {
+  background: linear-gradient(45deg,#7be7d7 1%,#7be7d7 40%,#7be7d7 40%,#86a4e3 100%);
+}
+
+.hamburger {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 16px;
+  right: 20px;
+}
+.hamburger span, .hamburger span:before, .hamburger span:after {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  border-radius: 30px;
+  background: white;
+  display: block;
+  transition: all 0.3s ease-in-out;
+  transform-origin: : center;
+}
+.hamburger span {
+  top: 50%;
+  margin-top: -1px;
+}
+.hamburger span:before, 
+.hamburger span:after {
+  content: '';
+}
+.hamburger span:before {
+  border-radius: 3px 3px 0 0;
+  top: -7px;
+}
+.hamburger span:after {
+  border-radius: 0 0 3px 3px;
+  top: 7px;
+}
+.hamburger.make-cross {
+  z-index: 999;
+}
+.hamburger.make-cross span {
+  transform: rotate(45deg);
+}
+.hamburger.make-cross span:before {
+  opacity: 0;
+}
+.hamburger.make-cross span:after {
+  transform: rotate(-90deg);
+  top: 0;
+  border-radius: 0;
+}
+
+.menus-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica, san-serif;
+  font-size: 14px;
+}
+.menus-list a {
+  text-decoration: none;
+}
+
+/******* Menu One Style *******/
+.hamburger-1.animated {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+.menu-1 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  padding-top: 50px;
+  background: rgba(34, 34, 34, 0.9);
+  overflow: hidden;
+  opacity: 0;
+  z-index: -1;
+}
+.menu-1 .menus-list li {
+  display: block;
+}
+
+.menu-1 .menus-list a {
+  display: block;
+  padding: 10px;
+  color: #9d9d9d;
+  transition: all 0.3s ease-in-out;
+}
+.menu-1 .menus-list a:hover, .menu-1 .menus-list a.active {
+  background: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
