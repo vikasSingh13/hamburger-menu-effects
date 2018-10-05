@@ -99,6 +99,7 @@ body {
   height: 30px;
   top: 16px;
   right: 20px;
+  z-index: 10;
 }
 .hamburger span, .hamburger span:before, .hamburger span:after {
   position: absolute;
@@ -184,3 +185,52 @@ body {
   background: rgba(0, 0, 0, 0.3);
   color: #ffffff;
 }
+
+/******* Menu Two Style *******/
+.menu-2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.menu-2 .menus-list li {
+  position: relative;
+  height: 100vh;
+  top: 0;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  transition: all 0.8s ease-in-out;
+}
+.menu-2 .menus-list:after {
+  clear: both;
+  content: '';
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.menu-2 .menus-list li a {
+  display: block;
+  height: 100vh;
+  width: 100%;
+  line-height: calc(100% + 100vh);
+  color: #fff;
+}
+.menu-2 .menus-list li:nth-child(1) {
+  background: #22c9ae;
+}
+.menu-2 .menus-list li:nth-child(2) {
+  background: #f7f6a9;
+}
+.menu-2 .menus-list li:nth-child(3) {
+  background: #992375;
+}
+.menu-2 .menus-list li:nth-child(4) {
+  background: #5b999b;
+}
+.menu-2 .menus-list li:nth-child(5) {
+  background: #f7cad7;
+}
+
