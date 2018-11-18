@@ -38,7 +38,7 @@ $('.js-hamburger-1').on('click', function(event) {
   }
 });
 
-// Menu 1 Animation 
+// Menu 2 Animation 
 var secondMenuLength = $('.js-menu-2').find('li').length;
 $('.js-menu-2').find('li').css('width', (100 / secondMenuLength)+'%');
 $('.js-menu-2').find('li').css('right', -(100 / secondMenuLength)+'%');
@@ -84,4 +84,68 @@ $('.js-menu-2').find('li').find('a').on('click', function() {
   for(var i = 1; i <= secondMenuLength; i++) {
     $('.js-inner-menu-'+i).css({'right': '-20%', 'opacity': '0'});
   }
+});
+
+// Menu 3 Animation 
+function thirdMenuOperation(isOpen) {
+  if(isOpen) {
+    $('.js-menu-3').addClass('active');
+    setTimeout(function() {
+      $('.js-menu-3').find('li').each(function(index, item) {
+        setTimeout(function() {
+          $(item).addClass('animated').removeClass('flipOutX').addClass('flipInX');
+        }, 200*index);
+      });
+    }, 500);
+  }else {
+    $('.js-menu-3').find('li').each(function(index, item) {
+      setTimeout(function() {
+        $(item).addClass('flipOutX');
+      }, 100*index);
+    });
+    setTimeout(function() {
+      $('.js-menu-3').removeClass('active');
+    }, 1000);
+  }
+}
+
+$('.js-hamburger-3').on('click', function(event) {
+  event.stopPropagation();
+  thirdMenuOperation(true);
+});
+
+$('.js-menu-3').find('a').on('click', function(event) {
+  event.stopPropagation();
+  event.preventDefault();
+  thirdMenuOperation(false);
+});
+
+$('.js-close-menu').on('click', function(event) {
+  event.stopPropagation();
+  event.preventDefault();
+  thirdMenuOperation(false);
+});
+
+// Menu 4 Animation
+$('.js-hamburger-4').on('click', function(event) {
+  event.stopPropagation();
+  event.preventDefault();
+  $(event.currentTarget).toggleClass('active');
+  $('.js-menu-4-bg').toggleClass('active');
+  $('.js-menu-4').toggleClass('active');
+
+  $('.js-menu-4').find('a').on('click', function() {
+    event.stopPropagation();
+    event.preventDefault();
+    $('.js-hamburger-4').removeClass('active');
+    $('.js-menu-4-bg').removeClass('active');
+    $('.js-menu-4').removeClass('active');
+  })
+});
+
+// Menu 5 Animation
+$('.js-hamburger-5').on('click', function(event) {
+  event.stopPropagation();
+  event.preventDefault();
+  $('.js-menu-5').toggleClass('active');
 });
